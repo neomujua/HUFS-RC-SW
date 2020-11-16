@@ -1,12 +1,12 @@
 class Stack:
     def __init__(self):
-        self.brackets = []
+        self.classList = []
 
     def push(self, a):
-        self.brackets.append(a)
+        self.classList.append(a)
     
     def pop(self):
-        return self.brackets.pop()
+        return self.classList.pop()
 
 def checkBrackets(expr):
     bracketsStack = Stack()
@@ -16,7 +16,7 @@ def checkBrackets(expr):
         else :
             tmpBracket = bracketsStack.pop()
             if (tmpBracket == "(" and i == ")") or (tmpBracket == "{" and i == "}") or (tmpBracket == "[" and i == "]"):
-                print(f"{tmpBracket} couple with f{i}")
+                print(f"{tmpBracket} couple with {i}")
             else :
                 print("incorrect")
                 break
